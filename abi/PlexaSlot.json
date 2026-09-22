@@ -1,0 +1,94 @@
+[
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_usdc", "type": "address" },
+      { "internalType": "address", "name": "_bnkr", "type": "address" },
+      { "internalType": "address", "name": "_owner", "type": "address" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "amount", "type": "uint256" }],
+    "name": "depositUSDC",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "amount", "type": "uint256" }],
+    "name": "depositBNKR",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "amount", "type": "uint256" }],
+    "name": "withdrawUSDC",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "amount", "type": "uint256" }],
+    "name": "withdrawBNKR",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "user", "type": "address" },
+      { "internalType": "uint8", "name": "token", "type": "uint8" }
+    ],
+    "name": "getBalance",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint8", "name": "token", "type": "uint8" },
+      { "internalType": "uint256", "name": "betAmount", "type": "uint256" }
+    ],
+    "name": "spin",
+    "outputs": [
+      { "internalType": "uint8[30]", "name": "grid", "type": "uint8[30]" },
+      { "internalType": "uint256", "name": "payout", "type": "uint256" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+      { "indexed": true, "internalType": "uint8", "name": "token", "type": "uint8" },
+      { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+    ],
+    "name": "Deposit",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+      { "indexed": true, "internalType": "uint8", "name": "token", "type": "uint8" },
+      { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
+    ],
+    "name": "Withdraw",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": true, "internalType": "address", "name": "player", "type": "address" },
+      { "indexed": true, "internalType": "uint8", "name": "token", "type": "uint8" },
+      { "indexed": false, "internalType": "uint256", "name": "betAmount", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "payout", "type": "uint256" },
+      { "indexed": false, "internalType": "uint8[30]", "name": "grid", "type": "uint8[30]" }
+    ],
+    "name": "SpinCompleted",
+    "type": "event"
+  }
+]
